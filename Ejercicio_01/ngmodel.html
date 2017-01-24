@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app> <!-- ng-app indica que la pagina, será controlada por angular -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- Incluir bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- Incluir bootstrap -->
+	<script src="js/lib/angular.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+	<div class="container">
+		<h1>ng-model</h1> <!-- Nos sirve para enlazar cualquier tipo de control, en este ejemplo vemos como se le asignan valores a una variable que actualizamos desde distintos campos, por ejemplo un nombre o un pais -->
+		<h4> en alngularjs</h4>
+		<hr>
+
+		<p>
+			Su nombre: {{ nombre | uppercase }}
+			<br>
+			<input type="text" ng-model="nombre" class="form-control" placeholder="Ingrese su nombre">
+		</p>
+
+		<p>
+			Seleccione el pais: {{ pais }}
+			<select class="form-control" ng-model="pais">
+				<option value="1">Costa Rica</option>
+				<option value="2">México</option>
+				<option value="3">Colombia</option>
+			</select>
+		</p>
+
+		<p>
+			Seleccione las opciones que desea: {{ opt1 }} {{ opt2 }}
+			<br>
+			<input type="checkbox" ng-model="opt1"> Opción1
+			<br>
+			<input type="checkbox" ng-model="opt2"> Opción2
+		</p>
+
+		<p>
+			Seleccione genero: {{ genero }}
+			<br>
+			<input type="radio" value="M" ng-model="genero"> Masculino
+			<br>
+			<input type="radio" value="F" ng-model="genero"> Femenino
+
+	</div>
+
+</body>
+</html>
